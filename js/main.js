@@ -290,10 +290,12 @@ class App {
       // Update images
       const galleryImages = document.querySelectorAll('.project-details__gallery .gallery-portrait img');
       if (galleryImages.length >= 2) {
-        galleryImages[0].src = project.imgPrimary;
+        const isInsidePages = window.location.pathname.includes('/pages/') || !document.querySelector('link[href^="css/"]');
+        const prefix = isInsidePages ? '../' : '';
+        galleryImages[0].src = prefix + project.imgPrimary;
         galleryImages[0].alt = `${name} - Façade`;
-        galleryImages[1].src = project.imgHover;
-        galleryImages[1].alt = `${name} - Interior`;
+        galleryImages[1].src = prefix + project.imgHover;
+        galleryImages[1].alt = `${name} - Site / Perspective`;
       }
 
       // Update CTA links

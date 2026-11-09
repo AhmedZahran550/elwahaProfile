@@ -291,8 +291,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تتميز عمارة الجوري بموقعها الاستراتيجي في قلب المنطقة 11 بالحي المتميز، مع واجهة معمارية عصرية مستوحاة من رقة ونقاء ورد الجوري، ومداخل فندقية رخامية.',
     descEn: 'Al Gouri Residence occupies a prime location in the heart of Zone 11, Al Hay Al Motamayez, featuring contemporary classical elevations and grand marble lobbies.',
-    imgPrimary: 'assets/images/projects/al-gouri/facade.svg',
-    imgHover: 'assets/images/projects/al-gouri/interior.svg'
+    imgPrimary: 'assets/images/projects/al-gouri/facade.jpg',
+    imgHover: 'assets/images/projects/al-gouri/site.jpg'
   },
   {
     id: 'al-yasmin',
@@ -310,8 +310,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تجمع عمارة الياسمين بين رحابة المساحات وتوزيع الغرف المثالي الذي يوفر الخصوصية والراحة التامة للأسرة مع إطلالة مفتوحة على المساحات الخضراء.',
     descEn: 'Al Yasmin Residence blends spacious layouts with optimized family privacy and commanding open views over lush parklands.',
-    imgPrimary: 'assets/images/projects/al-yasmin/facade.svg',
-    imgHover: 'assets/images/projects/al-yasmin/interior.svg'
+    imgPrimary: 'assets/images/projects/al-yasmin/facade.jpg',
+    imgHover: 'assets/images/projects/al-yasmin/site.jpg'
   },
   {
     id: 'al-narges',
@@ -329,8 +329,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تنفرد عمارة النرجس بموقع حيوي هادئ في منطقة العين مع شرفات بانورامية واسعة وتصميم واجهات يمزج بين الحجر الطبيعي والزجاج المزدوج العازل للصوت والحرارة.',
     descEn: 'Al Narges Residence is nestled in the serene Al Ain Zone, characterized by wide panoramic balconies and thermal-acoustic double glazing.',
-    imgPrimary: 'assets/images/projects/al-narges/facade.svg',
-    imgHover: 'assets/images/projects/al-narges/interior.svg'
+    imgPrimary: 'assets/images/projects/al-narges/facade.jpg',
+    imgHover: 'assets/images/projects/al-narges/site.jpg'
   },
   {
     id: 'al-orchid',
@@ -348,8 +348,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تجسد عمارة الأوركيد الفخامة العصرية في أدق تفاصيلها، مع إضاءات ليلية مدروسة ومواقف سيارات خاصة لكل وحدة ومصعد إيطالي حديث.',
     descEn: 'Al Orchid Residence embodies modern luxury in every facet, complete with architectural nocturnal illumination and designated private parking.',
-    imgPrimary: 'assets/images/projects/al-orchid/facade.svg',
-    imgHover: 'assets/images/projects/al-orchid/interior.svg'
+    imgPrimary: 'assets/images/projects/al-orchid/facade.jpg',
+    imgHover: 'assets/images/projects/al-orchid/site.jpg'
   },
   {
     id: 'al-tulip',
@@ -367,8 +367,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تقع عمارة التوليب في المنطقة 12 وتتميز بالهدوء التام والقرب من الخدمات الرئيسية ومحاور الطرق المؤدية إلى العاصمة الإدارية وطريق السويس.',
     descEn: 'Located in Zone 12, Al Tulip Residence offers tranquil residential living seconds away from primary arterial routes to the New Administrative Capital.',
-    imgPrimary: 'assets/images/projects/al-tulip/facade.svg',
-    imgHover: 'assets/images/projects/al-tulip/interior.svg'
+    imgPrimary: 'assets/images/projects/al-tulip/facade.jpg',
+    imgHover: 'assets/images/projects/al-tulip/site.jpg'
   },
   {
     id: 'al-zanbaq',
@@ -386,8 +386,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'عنوان الفخامة في المنطقة 8، مع تصميم خارجي يعكس قوة البناء وأناقة التفاصيل، وتشطيبات مدخل على أعلى مستوى فندقي.',
     descEn: 'The benchmark of prestige in Zone 8, with an architectural envelope reflecting timeless strength and refined hotel-level entry vestibules.',
-    imgPrimary: 'assets/images/projects/al-zanbaq/facade.svg',
-    imgHover: 'assets/images/projects/al-zanbaq/interior.svg'
+    imgPrimary: 'assets/images/projects/al-zanbaq/facade.jpg',
+    imgHover: 'assets/images/projects/al-zanbaq/site.jpg'
   },
   {
     id: 'al-lotus',
@@ -405,8 +405,8 @@ export const projectsData = [
     plotArea: '450 – 550 م²',
     descAr: 'تحفة المنطقة 11 المستوحاة من زهرة اللوتس التاريخية؛ تتميز بإطلالة مزدوجة وتهوية طبيعية ممتازة ومساحات داخلية متوازنة تلبي متطلبات العائلات الراقية.',
     descEn: 'Inspired by the historic Egyptian Lotus flower, this Zone 11 residence boasts dual vistas, exceptional natural ventilation, and generous internal geometry.',
-    imgPrimary: 'assets/images/projects/al-lotus/facade.svg',
-    imgHover: 'assets/images/projects/al-lotus/interior.svg'
+    imgPrimary: 'assets/images/projects/al-lotus/facade.jpg',
+    imgHover: 'assets/images/projects/al-lotus/site.jpg'
   }
 ];
 
