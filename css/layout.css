@@ -1,0 +1,241 @@
+/**
+ * Layout Architecture & Grid Systems
+ * Pure CSS with Logical Properties
+ */
+
+/* ==========================================================================
+   Page Container & Wrapper
+   ========================================================================= */
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.container--narrow {
+  max-width: 900px;
+}
+
+.container--wide {
+  max-width: 1480px;
+}
+
+/* ==========================================================================
+   Section Spacing & Cadence
+   ========================================================================== */
+
+.section {
+  padding-block: var(--section-pad-y);
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.section--hero {
+  padding-block: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Page Hero Banner (Subpages: Projects, About, Contact, Chairman)
+   Ensures title is never obscured by the fixed header navbar
+   ========================================================================== */
+
+.page-hero {
+  padding-block-start: clamp(7.5rem, 15vh, 10.5rem);
+  padding-block-end: clamp(3rem, 6vh, 5rem);
+  background: radial-gradient(circle at 50% 0%, #16263F 0%, #0E1A2A 85%);
+  border-block-end: 1px solid var(--color-gold-muted);
+  text-align: center;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.page-hero__title {
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  color: var(--color-ivory);
+  margin-block-end: var(--space-sm);
+  line-height: var(--leading-tight);
+}
+
+.page-hero__subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--color-gold-light);
+  max-width: 65ch;
+  margin-inline: auto;
+  line-height: var(--leading-normal);
+}
+
+.section--alt {
+  background-color: var(--color-bg-card);
+}
+
+.section--bordered {
+  border-block-start: 1px solid var(--color-gold-muted);
+}
+
+/* Section Header Structure */
+.section__header {
+  margin-block-end: clamp(2.5rem, 5vw, 4.5rem);
+  max-width: 720px;
+}
+
+.section__header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section__header--center p {
+  margin-inline: auto;
+}
+
+.section__header--split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: none;
+}
+
+@media (min-width: 900px) {
+  .section__header--split {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .section__header--split .section__intro {
+    max-width: 480px;
+    margin-block-end: 0;
+  }
+}
+
+.section__title {
+  color: var(--color-ivory);
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
+  margin-block-end: var(--space-sm);
+}
+
+.section__subtitle {
+  color: var(--color-steel);
+  font-size: var(--text-body-lg);
+  margin-block-end: 0;
+}
+
+/* ==========================================================================
+   Grid & Flex Modules
+   ========================================================================== */
+
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 680px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Editorial Split 2-Column Layout */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .split-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  .split-layout--reversed {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+/* Flex Utilities */
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--between {
+  justify-content: space-between;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
+  gap: var(--space-lg);
+}
+
+.gap-xl {
+  gap: var(--space-xl);
+}
+

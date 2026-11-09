@@ -1,0 +1,218 @@
+/**
+ * Projects Portfolio & Details Stylesheet
+ * Alwaha Development (الواحة العقارية)
+ */
+
+/* Projects Grid Layout */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (min-width: 680px) {
+  .projects-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .projects-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Project Details Single Page Layout
+   ========================================================================== */
+
+.project-details__hero {
+  padding-block-start: clamp(7.5rem, 14vh, 10rem);
+  padding-block-end: clamp(2.5rem, 5vh, 4rem);
+  border-block-end: 1px solid var(--color-gold-muted);
+}
+
+.project-details__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-gold);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-block-end: var(--space-lg);
+  transition: color var(--duration-fast);
+}
+
+.project-details__back:hover {
+  color: var(--color-gold-light);
+}
+
+.project-details__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-block-end: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .project-details__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+/* Two Tall Portrait Images Grid */
+.project-details__gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-block-end: var(--space-3xl);
+}
+
+@media (min-width: 768px) {
+  .project-details__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallery-portrait {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-gold-muted);
+  background-color: #122035;
+}
+
+.gallery-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+
+.gallery-portrait:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-portrait__caption {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(to top, rgba(14, 26, 42, 0.95), transparent);
+  color: var(--color-ivory);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* Specifications Table / Card */
+.specs-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.specs-panel__title {
+  font-size: var(--text-h3);
+  color: var(--color-ivory);
+  margin-block-end: var(--space-lg);
+  padding-block-end: var(--space-sm);
+  border-block-end: 1px solid rgba(201, 162, 75, 0.15);
+}
+
+.specs-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-block-end: var(--space-2xl);
+}
+
+@media (min-width: 600px) {
+  .specs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.spec-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(14, 26, 42, 0.5);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-sm);
+}
+
+.spec-box__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  background: rgba(201, 162, 75, 0.1);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spec-box__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.spec-box__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-box__label {
+  font-size: var(--text-xs);
+  color: var(--color-steel-muted);
+}
+
+.spec-box__val {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-ivory);
+}
+
+/* Prev / Next Navigation */
+.project-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-2xl);
+  border-block-start: 1px solid var(--color-gold-muted);
+  margin-block-start: var(--space-3xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.project-pagination__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-steel);
+  transition: all var(--duration-fast);
+}
+
+.project-pagination__link:hover {
+  color: var(--color-gold-light);
+}
+
+.project-pagination__label {
+  font-size: var(--text-xs);
+  color: var(--color-steel-muted);
+}
+
+.project-pagination__name {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-ivory);
+}
+

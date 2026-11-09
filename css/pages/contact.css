@@ -1,0 +1,197 @@
+/**
+ * Contact Page Stylesheet
+ * Alwaha Development (الواحة العقارية)
+ */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 960px) {
+  .contact-layout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+/* Contact Info Side */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contact-info-card {
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast);
+}
+
+.contact-info-card:hover {
+  border-color: var(--color-gold);
+}
+
+.contact-info-card__title {
+  font-size: var(--text-h4);
+  color: var(--color-ivory);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-block-end: var(--space-md);
+}
+
+.contact-info-card__title svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-gold);
+  fill: none;
+}
+
+.phone-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.phone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-xs);
+  border-block-end: 1px solid rgba(201, 162, 75, 0.1);
+}
+
+.phone-item:last-child {
+  border-block-end: none;
+}
+
+.phone-item__role {
+  font-size: var(--text-sm);
+  color: var(--color-steel);
+}
+
+.phone-item__num {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-gold-light);
+  direction: ltr; /* Keeps Egyptian mobile prefix readable */
+  transition: color var(--duration-fast);
+}
+
+.phone-item__num:hover {
+  color: var(--color-ivory);
+}
+
+/* WhatsApp Direct CTA Card */
+.whatsapp-cta {
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(14, 26, 42, 0.6) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  transition: all var(--duration-fast);
+}
+
+.whatsapp-cta:hover {
+  border-color: #25D366;
+  transform: translateY(-2px);
+}
+
+.whatsapp-cta__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.whatsapp-cta__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.whatsapp-cta__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.whatsapp-cta__title {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-ivory);
+}
+
+.whatsapp-cta__desc {
+  font-size: var(--text-xs);
+  color: var(--color-steel);
+}
+
+/* Contact Form Box */
+.contact-form-box {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.contact-form-box__title {
+  font-size: var(--text-h3);
+  color: var(--color-ivory);
+  margin-block-end: var(--space-xs);
+}
+
+.contact-form-box__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-steel);
+  margin-block-end: var(--space-xl);
+}
+
+/* Map Placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gold-muted);
+  background: #111e30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--color-steel);
+  text-align: center;
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-placeholder svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--color-gold);
+  fill: none;
+}
+
+.map-placeholder__title {
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-ivory);
+}
+
+.map-placeholder__coords {
+  font-size: var(--text-xs);
+  color: var(--color-steel-muted);
+}
+

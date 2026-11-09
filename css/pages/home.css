@@ -1,0 +1,420 @@
+/**
+ * Home Page Stylesheet
+ * Alwaha Development (الواحة العقارية)
+ */
+
+/* ==========================================================================
+   Hero Stage & Real Estate Building Visual Backdrop
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block-start: clamp(7.5rem, 14vh, 10.5rem);
+  padding-block-end: clamp(4rem, 8vh, 6rem);
+}
+
+/* Dedicated Real Estate Building Backdrop Layer */
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-bg);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__building-image {
+  position: absolute;
+  inset: -3% -3% -3% -3%;
+  width: 106%;
+  height: 106%;
+  background-image: url('../../assets/images/hero/hero-building-render.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 28% center;
+  transform: scale(1.02);
+  animation: heroBuildingBreathe 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+html[dir="ltr"] .hero__building-image {
+  background-position: 72% center;
+}
+
+@keyframes heroBuildingBreathe {
+  0% {
+    transform: scale(1.02) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-0.8%, -0.5%);
+  }
+  100% {
+    transform: scale(1.03) translate(0.6%, -0.2%);
+  }
+}
+
+/* Directional Atmospheric Overlay Gradients */
+.hero__overlay-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: 
+    /* Top header blend */
+    linear-gradient(to bottom, rgba(14, 26, 42, 0.88) 0%, rgba(14, 26, 42, 0.35) 18%, transparent 35%),
+    /* Bottom section blend */
+    linear-gradient(to top, #0E1A2A 0%, rgba(14, 26, 42, 0.88) 12%, rgba(14, 26, 42, 0.4) 28%, transparent 50%),
+    /* RTL Directional Backdrop: deep navy backing on the right for Arabic typography */
+    linear-gradient(to left, rgba(14, 26, 42, 0.95) 0%, rgba(14, 26, 42, 0.84) 42%, rgba(14, 26, 42, 0.45) 75%, rgba(14, 26, 42, 0.2) 100%);
+}
+
+html[dir="ltr"] .hero__overlay-gradient {
+  background: 
+    linear-gradient(to bottom, rgba(14, 26, 42, 0.88) 0%, rgba(14, 26, 42, 0.35) 18%, transparent 35%),
+    linear-gradient(to top, #0E1A2A 0%, rgba(14, 26, 42, 0.88) 12%, rgba(14, 26, 42, 0.4) 28%, transparent 50%),
+    /* LTR Directional Backdrop: deep navy backing on the left for English typography */
+    linear-gradient(to right, rgba(14, 26, 42, 0.95) 0%, rgba(14, 26, 42, 0.84) 42%, rgba(14, 26, 42, 0.45) 75%, rgba(14, 26, 42, 0.2) 100%);
+}
+
+/* Warm Golden-Hour Twilight Glow over building entrance & palms */
+.hero__overlay-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(circle at 35% 65%, rgba(201, 162, 75, 0.14) 0%, rgba(230, 203, 130, 0.04) 45%, transparent 75%);
+}
+
+html[dir="ltr"] .hero__overlay-glow {
+  background: radial-gradient(circle at 65% 65%, rgba(201, 162, 75, 0.14) 0%, rgba(230, 203, 130, 0.04) 45%, transparent 75%);
+}
+
+@media (max-width: 767px) {
+  .hero__building-image {
+    background-position: center 30%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: none;
+    transform: none;
+  }
+
+  .hero__overlay-gradient {
+    background: linear-gradient(to bottom, rgba(14, 26, 42, 0.9) 0%, rgba(14, 26, 42, 0.75) 45%, rgba(14, 26, 42, 0.96) 100%);
+  }
+}
+
+/* Hero Content Stack */
+.hero__content {
+  position: relative;
+  z-index: var(--z-content);
+  max-width: 820px;
+}
+
+.hero__tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.45rem 1.15rem;
+  border-radius: var(--radius-pill);
+  background: rgba(22, 38, 63, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-gold-muted);
+  color: var(--color-gold-light);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  margin-block-end: var(--space-lg);
+  box-shadow: 0 4px 16px rgba(5, 10, 18, 0.4);
+}
+
+.hero__title {
+  font-size: var(--text-hero);
+  font-weight: 800;
+  color: var(--color-ivory);
+  line-height: 1.14;
+  margin-block-end: var(--space-md);
+  text-shadow: 0 4px 24px rgba(5, 10, 18, 0.6);
+}
+
+.hero__description {
+  font-size: var(--text-body-lg);
+  color: #C8D3E4;
+  line-height: var(--leading-relaxed);
+  max-width: 62ch;
+  margin-block-end: var(--space-2xl);
+  text-shadow: 0 2px 12px rgba(5, 10, 18, 0.5);
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-block-end: clamp(2rem, 4vw, 3.25rem);
+}
+
+/* Live Hero Metrics Ribbon */
+.hero__metrics {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  flex-wrap: wrap;
+  padding-block: var(--space-md);
+  padding-inline: var(--space-lg);
+  background: rgba(14, 26, 42, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 162, 75, 0.28);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 32px rgba(5, 10, 18, 0.45);
+  max-width: fit-content;
+}
+
+.hero__metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__metric-val {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero__metric-label {
+  font-size: var(--text-xs);
+  color: #D6DFEE;
+  font-weight: 500;
+}
+
+.hero__metric-divider {
+  width: 1px;
+  height: 32px;
+  background-color: rgba(201, 162, 75, 0.25);
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hero__metric-divider {
+    display: block;
+  }
+}
+
+/* Scroll Indicator */
+.hero__scroll-indicator {
+  position: absolute;
+  inset-block-end: var(--space-xl);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-steel-muted);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  z-index: var(--z-content);
+}
+
+.hero__scroll-indicator span {
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: linear-gradient(to bottom, var(--color-gold), transparent);
+  animation: scrollDown 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scrollDown {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ==========================================================================
+   Intro Statement Section
+   ========================================================================== */
+
+.intro-card {
+  padding: clamp(2rem, 5vw, 4rem);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to inline-end, var(--color-gold), transparent);
+}
+
+.intro-card__quote {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  color: var(--color-ivory);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  margin-block-end: var(--space-lg);
+}
+
+/* ==========================================================================
+   Chairman Teaser Section
+   ========================================================================== */
+
+.chairman-teaser {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.chairman-teaser__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .chairman-teaser__grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.chairman-teaser__portrait-wrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background-color: #122035;
+  overflow: hidden;
+}
+
+.chairman-teaser__portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chairman-teaser__content {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.chairman-teaser__quote {
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  color: var(--color-ivory);
+  font-style: italic;
+  line-height: var(--leading-relaxed);
+  margin-block-end: var(--space-lg);
+  position: relative;
+}
+
+.chairman-teaser__author {
+  margin-block-start: auto;
+  border-block-start: 1px solid rgba(201, 162, 75, 0.15);
+  padding-block-start: var(--space-md);
+}
+
+.chairman-teaser__name {
+  font-size: var(--text-h4);
+  color: var(--color-gold-light);
+  font-weight: 700;
+}
+
+.chairman-teaser__role {
+  font-size: var(--text-sm);
+  color: var(--color-steel);
+}
+
+/* ==========================================================================
+   Big Contact Band
+   ========================================================================== */
+
+.contact-band {
+  background: linear-gradient(135deg, #16263F 0%, #0E1A2A 100%);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-band::after {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.contact-band__title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--color-ivory);
+  margin-block-end: var(--space-sm);
+}
+
+.contact-band__text {
+  font-size: var(--text-body-lg);
+  color: var(--color-steel);
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-block-end: var(--space-2xl);
+}
+
+.contact-band__phones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-block-end: var(--space-xl);
+}
+
+.phone-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.85rem 1.6rem;
+  background: rgba(22, 38, 63, 0.8);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-pill);
+  color: var(--color-ivory);
+  font-weight: 600;
+  font-size: var(--text-body);
+  direction: ltr; /* Keeps Egyptian phone numbers ordered correctly */
+  transition: all var(--duration-fast) var(--ease-luxury);
+}
+
+.phone-pill:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-bg-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.phone-pill svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+

@@ -1,0 +1,160 @@
+/**
+ * About Page Stylesheet
+ * Alwaha Development (الواحة العقارية)
+ */
+
+/* Vision / Mission / Values Grid */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar-card {
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--duration-medium) var(--ease-luxury);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+}
+
+.pillar-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(201, 162, 75, 0.1);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: var(--space-lg);
+}
+
+.pillar-card__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.pillar-card__title {
+  font-size: var(--text-h3);
+  color: var(--color-ivory);
+  margin-block-end: var(--space-sm);
+}
+
+.pillar-card__text {
+  font-size: var(--text-body);
+  color: var(--color-steel);
+  line-height: var(--leading-relaxed);
+  margin-block-end: 0;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin-inline: auto;
+  padding-block: var(--space-xl);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 24px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-gold), var(--color-gold-muted), transparent);
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline__item {
+  position: relative;
+  margin-block-end: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 60px;
+}
+
+@media (min-width: 768px) {
+  .timeline__item {
+    padding-inline-start: 0;
+    width: 50%;
+  }
+
+  .timeline__item:nth-child(odd) {
+    margin-inline-end: auto;
+    padding-inline-end: 45px;
+    text-align: end;
+  }
+
+  .timeline__item:nth-child(even) {
+    margin-inline-start: auto;
+    padding-inline-start: 45px;
+    text-align: start;
+  }
+}
+
+.timeline__dot {
+  position: absolute;
+  inset-block-start: 4px;
+  inset-inline-start: 17px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-bg-deep);
+  border: 2px solid var(--color-gold);
+}
+
+@media (min-width: 768px) {
+  .timeline__item:nth-child(odd) .timeline__dot {
+    inset-inline-start: auto;
+    inset-inline-end: -7.5px;
+  }
+
+  .timeline__item:nth-child(even) .timeline__dot {
+    inset-inline-start: -7.5px;
+  }
+}
+
+.timeline__year {
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--color-gold-light);
+  margin-block-end: var(--space-2xs);
+}
+
+.timeline__title {
+  font-size: var(--text-body-lg);
+  color: var(--color-ivory);
+  font-weight: 600;
+  margin-block-end: var(--space-xs);
+}
+
+.timeline__desc {
+  font-size: var(--text-sm);
+  color: var(--color-steel);
+  line-height: var(--leading-normal);
+  margin-block-end: 0;
+}
+
