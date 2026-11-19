@@ -23,6 +23,7 @@ export const translations = {
     btn_all_projects: 'جميع المشروعات',
     btn_send_inquiry: 'إرسال الاستفسار',
     btn_whatsapp: 'محادثة عبر واتساب',
+    btn_whatsapp_direct: 'محادثة واتساب مباشرة',
     btn_back_to_projects: 'العودة للمشروعات',
     skip_to_content: 'الانتقال إلى المحتوى الرئيسي',
 
@@ -31,17 +32,17 @@ export const translations = {
     brand_full: 'شركة الواحة العقارية للتطوير',
     brand_tagline: 'نبني ثقتك قبل أن نبني عقارك',
     brand_founded: 'تأسست عام 2020',
-    brand_location: 'الحي المتميز، مدينة بدر، القاهرة',
+    brand_location: 'الحي المتميز، مدينة بدر | بيت الوطن، التجمع الخامس، القاهرة',
 
     // Hero Section
-    hero_badge: 'تطوير عقاري راقٍ · الحي المتميز مدينة بدر',
+    hero_badge: 'تطوير عقاري راقٍ · الحي المتميز مدينة بدر · بيت الوطن التجمع الخامس',
     hero_title: 'نبني ثقتك<br><span class="text-gold-gradient">قبل أن نبني عقارك</span>',
-    hero_desc: 'منذ عام 2020، نلتزم في الواحة العقارية بتقديم مجتمعات سكنية متكاملة تجمع بين رقي الموقع، ودقة التنفيذ، والشفافية المطلقة في كل خطوة.',
+    hero_desc: 'منذ عام 2020، نلتزم في الواحة العقارية بتقديم مجتمعات سكنية متكاملة تجمع بين رقي الموقع، ودقة التنفيذ، والشفافية المطلقة في كل خطوة بالحي المتميز وبيت الوطن.',
     hero_scroll: 'مرر لأسفل',
     hero_3d_badge: 'نموذج معماري ثلاثي الأبعاد تفاعلي',
 
     // Intro Section
-    intro_lead: 'تأسست شركة الواحة العقارية عام 2020 كشركة متخصصة في التطوير العقاري الراقي داخل الحي المتميز بمدينة بدر. ومنذ انطلاقتنا ارتبط اسمنا بالأمانة والشفافية ودقة مواعيد التسليم.',
+    intro_lead: 'تأسست شركة الواحة العقارية عام 2020 كشركة متخصصة في التطوير العقاري الراقي داخل الحي المتميز بمدينة بدر وبيت الوطن بالتجمع الخامس. ومنذ انطلاقتنا ارتبط اسمنا بالأمانة والشفافية ودقة مواعيد التسليم.',
     intro_quote: '«نؤمن أن العقار ليس مجرد جدران، بل بيت يحتضن الأسرة واستثمار يحفظ قيمته عبر السنين.»',
 
     // Stats Counters
@@ -132,9 +133,13 @@ export const translations = {
     about_timeline_title: 'مسيرتنا وتطورنا',
 
     // Footer
-    footer_about: 'شركة تطوير عقاري مصرية رائدة متخصصة في المشروعات السكنية الفاخرة بالحي المتميز بمدينة بدر. نضع ثقة عملائنا في مقدمة أولوياتنا.',
+    footer_about: 'شركة تطوير عقاري مصرية رائدة متخصصة في المشروعات السكنية الفاخرة بالحي المتميز بمدينة بدر وبيت الوطن بالتجمع الخامس. نضع ثقة عملائنا في مقدمة أولوياتنا.',
     footer_quick_links: 'روابط سريعة',
     footer_contact_info: 'بيانات التواصل',
+    footer_follow: 'تابعنا عبر منصاتنا',
+    footer_social_facebook: 'فيسبوك',
+    footer_social_email: 'البريد الإلكتروني',
+    footer_social_whatsapp_channel: 'قناة واتساب',
     footer_rights: 'جميع الحقوق محفوظة © 2026 شركة الواحة العقارية للتطوير.',
     footer_designed_for: 'تصميم يليق بالفخامة العقارية'
   },
@@ -154,6 +159,7 @@ export const translations = {
     btn_all_projects: 'All Residences',
     btn_send_inquiry: 'Send Inquiry',
     btn_whatsapp: 'Chat via WhatsApp',
+    btn_whatsapp_direct: 'Direct WhatsApp Chat',
     btn_back_to_projects: 'Back to Projects',
     skip_to_content: 'Skip to main content',
 
@@ -162,17 +168,17 @@ export const translations = {
     brand_full: 'Alwaha Real Estate Development',
     brand_tagline: 'Building Your Trust Before Building Your Property',
     brand_founded: 'Founded in 2020',
-    brand_location: 'Al Hay Al Motamayez, Badr City, Cairo, Egypt',
+    brand_location: 'Al Hay Al Motamayez, Badr City | Beit Al Watan, 5th Settlement, Cairo',
 
     // Hero Section
-    hero_badge: 'Luxury Residential Development · Al Hay Al Motamayez, Badr City',
+    hero_badge: 'Boutique Real Estate · Al Hay Al Motamayez, Badr City · Beit Al Watan, 5th Settlement',
     hero_title: 'Building Your Trust<br><span class="text-gold-gradient">Before Your Property</span>',
-    hero_desc: 'Since 2020, Alwaha Development has been committed to crafting refined boutique residential communities combining prime locations, meticulous execution, and complete transparency.',
+    hero_desc: 'Since 2020, Alwaha Development has been committed to crafting refined boutique residential communities combining prime locations, meticulous execution, and complete transparency in Badr City and Beit Al Watan.',
     hero_scroll: 'Scroll to explore',
     hero_3d_badge: 'Interactive 3D Architectural Model',
 
     // Intro Section
-    intro_lead: 'Founded in 2020, Alwaha Development specializes in boutique luxury residential properties within Al Hay Al Motamayez, Badr City. From the beginning, our reputation has been built on integrity, transparency, and timely delivery.',
+    intro_lead: 'Founded in 2020, Alwaha Development specializes in boutique luxury residential properties within Al Hay Al Motamayez, Badr City and Beit Al Watan, Fifth Settlement. From the beginning, our reputation has been built on integrity, transparency, and timely delivery.',
     intro_quote: '"We believe real estate is never just walls; it is a home that embraces family and an investment that preserves value across generations."',
 
     // Stats Counters
@@ -263,9 +269,13 @@ export const translations = {
     about_timeline_title: 'Our Milestones',
 
     // Footer
-    footer_about: 'A boutique Egyptian real estate development firm dedicated to upscale residential projects in Al Hay Al Motamayez, Badr City.',
+    footer_about: 'A boutique Egyptian real estate development firm dedicated to upscale residential projects in Al Hay Al Motamayez, Badr City and Beit Al Watan, Fifth Settlement.',
     footer_quick_links: 'Quick Navigation',
     footer_contact_info: 'Official Contacts',
+    footer_follow: 'Connect With Us',
+    footer_social_facebook: 'Facebook',
+    footer_social_email: 'Email',
+    footer_social_whatsapp_channel: 'WhatsApp Channel',
     footer_rights: 'All Rights Reserved © 2026 Alwaha Development.',
     footer_designed_for: 'Engineered for Luxury Real Estate'
   }

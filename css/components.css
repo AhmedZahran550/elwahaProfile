@@ -757,3 +757,244 @@ html[dir="ltr"] .btn--text:hover svg {
   }
 }
 
+/* ==========================================================================
+   Footer Social Media Links
+   ========================================================================== */
+
+.footer__social-wrap {
+  margin-block-start: var(--space-sm);
+}
+
+.footer__social-label {
+  font-size: var(--text-xs);
+  color: var(--color-gold-light);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  margin-block-end: var(--space-xs);
+  display: block;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--color-gold-muted);
+  border-radius: var(--radius-sm);
+  background: rgba(22, 38, 63, 0.4);
+  color: var(--color-steel);
+  transition: all var(--duration-fast) var(--ease-luxury);
+}
+
+.footer__social-link:hover {
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+  background: var(--color-bg-card);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201, 162, 75, 0.15);
+}
+
+.footer__social-link svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--duration-fast) var(--ease-luxury);
+}
+
+.footer__social-link:hover svg {
+  transform: scale(1.08);
+}
+
+/* Facebook specific subtle hover */
+.footer__social-link--fb:hover {
+  color: #1877F2;
+  border-color: rgba(24, 119, 242, 0.5);
+  background: rgba(24, 119, 242, 0.1);
+}
+
+/* WhatsApp Channel specific subtle hover */
+.footer__social-link--wa:hover {
+  color: #25D366;
+  border-color: rgba(37, 211, 102, 0.5);
+  background: rgba(37, 211, 102, 0.1);
+}
+
+/* Email specific subtle hover */
+.footer__social-link--mail:hover {
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+/* ==========================================================================
+   Mobile Navigation Drawer Contact & Social
+   ========================================================================== */
+
+.mobile-nav__phones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-block-start: var(--space-sm);
+}
+
+.mobile-nav__phone-link {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-ivory);
+  direction: ltr;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: rgba(22, 38, 63, 0.6);
+  border: 1px solid var(--color-gold-muted);
+  transition: all var(--duration-fast) var(--ease-luxury);
+}
+
+.mobile-nav__phone-link:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+}
+
+.mobile-nav__wa-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #25D366;
+  transition: all var(--duration-fast) var(--ease-luxury);
+}
+
+.mobile-nav__wa-link:hover {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.mobile-nav__wa-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.mobile-nav__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-block-start: var(--space-md);
+}
+
+.mobile-nav__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-muted);
+  background: rgba(22, 38, 63, 0.5);
+  color: var(--color-steel);
+  transition: all var(--duration-fast) var(--ease-luxury);
+}
+
+.mobile-nav__social-link:hover {
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+  background: var(--color-bg-card);
+  transform: translateY(-2px);
+}
+
+.mobile-nav__social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile Footer Ergonomics */
+@media (max-width: 767px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .footer__brand {
+    align-items: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__links {
+    align-items: center;
+  }
+
+  .footer__links li {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   Executive Portrait Stage (Transparent Organic Cutout Integration)
+   ========================================================================== */
+
+.chairman-portrait-stage {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 65%, rgba(201, 162, 75, 0.16) 0%, rgba(22, 38, 63, 0.45) 55%, transparent 85%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.chairman-portrait-stage::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 10%;
+  inset-inline: 12%;
+  inset-block-end: 0;
+  border: 1px solid var(--color-gold-muted);
+  border-radius: 120px 120px 0 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background: radial-gradient(circle at 50% 30%, rgba(230, 203, 130, 0.08) 0%, transparent 70%);
+}
+
+.chairman-portrait-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  position: relative;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  filter: drop-shadow(0 12px 28px rgba(5, 10, 18, 0.5));
+  transition: transform var(--duration-medium) var(--ease-luxury);
+}
+
+.chairman-portrait-stage:hover img {
+  transform: scale(1.02);
+}
+
+
+
