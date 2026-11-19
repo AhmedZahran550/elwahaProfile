@@ -966,6 +966,16 @@ html[dir="ltr"] .btn--text:hover svg {
   overflow: hidden;
 }
 
+.chairman-portrait-stage picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
 .chairman-portrait-stage::before {
   content: '';
   position: absolute;
@@ -988,6 +998,8 @@ html[dir="ltr"] .btn--text:hover svg {
   z-index: 1;
   -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
   filter: drop-shadow(0 12px 28px rgba(5, 10, 18, 0.5));
   transition: transform var(--duration-medium) var(--ease-luxury);
 }

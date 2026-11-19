@@ -305,6 +305,16 @@ html[dir="ltr"] .hero__overlay-glow {
   justify-content: center;
 }
 
+.chairman-teaser__portrait-wrap picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
 .chairman-teaser__portrait-wrap::before {
   content: '';
   position: absolute;
@@ -327,6 +337,8 @@ html[dir="ltr"] .hero__overlay-glow {
   z-index: 1;
   -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
   filter: drop-shadow(0 14px 30px rgba(5, 10, 18, 0.55));
   transition: transform var(--duration-medium) var(--ease-luxury);
 }
